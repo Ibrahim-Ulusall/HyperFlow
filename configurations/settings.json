@@ -1,5 +1,5 @@
 {
     "ConnectionString": {
-        "DefaultConnection": "Server=127.0.0.1"
+        "DefaultConnection": "Host=localhost;Database=hyperflow;Username=postgres;Password=password;Port=5432;Timeout=60;Read Buffer Size=18000;Connection Idle Lifetime=150;Connection Lifetime=300;"
     }
 }
