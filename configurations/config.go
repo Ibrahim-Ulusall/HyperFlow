@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-var configurationFileName string = "configurations/settings.json"
+var configurationFileName string = "E:\\go\\configurations\\settings.json"
 
 type Config struct{}
 
