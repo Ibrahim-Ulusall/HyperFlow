@@ -1,5 +1,15 @@
 {
     "ConnectionString": {
-        "DefaultConnection": "Host=localhost;Database=hyperflow;Username=postgres;Password=password;Port=5432;Timeout=60;Read Buffer Size=18000;Connection Idle Lifetime=150;Connection Lifetime=300;"
+        "DefaultConnection": "host=localhost port=5432 user=postgres password=postgres dbname=hyperflow sslmode=disable"   
+    },
+    "Development":{
+        "Log": {
+            "Debug":false
+        }
+    },
+    "LaunchSettings":{
+        "Port":80,
+        "Secure":443
     }
+    
 }

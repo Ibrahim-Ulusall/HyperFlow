@@ -4,6 +4,10 @@ import core "HyperFlow/core/entities"
 
 type Bank struct {
 	core.BaseEntity[int]
-	Name  string
-	Color string
+	Name  string `gorm:"column:adi"`
+	Color string `gorm:"column:color"`
+}
+
+func (Bank) TableName() string {
+	return "masraflar.bankas"
 }

@@ -1,20 +1,17 @@
 package repositories
 
 import (
-	domain "HyperFlow/domain/entities"
+	core "HyperFlow/core/repositories"
+	entities "HyperFlow/domain/entities"
+
+	"gorm.io/gorm"
 )
 
 type BankRepository struct {
+	core.BaseRepository[entities.Bank]
 }
 
-func (bankaRepository *BankRepository) Add(bank domain.Bank) {
-
-}
-
-func (bankRepository *BankRepository) Update(bank domain.Bank) {
-
-}
-
-func (bankRepository *BankRepository) Delete(bank domain.Bank) {
-
+func (b *BankRepository) NewBankRepository(db *gorm.DB) *BankRepository {
+	b.Database = db
+	return b
 }
