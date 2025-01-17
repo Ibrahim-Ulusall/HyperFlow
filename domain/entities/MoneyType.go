@@ -6,6 +6,10 @@ import (
 
 type MoneyType struct {
 	core.BaseEntity[int]
-	Name   string
-	Symbol string
+	Name   string `gorm:"column:name"`
+	Symbol string `gorm:"column:symbol"`
+}
+
+func (MoneyType) TableName() string {
+	return "masraflar.money_types"
 }

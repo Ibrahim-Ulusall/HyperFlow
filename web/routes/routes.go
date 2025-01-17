@@ -14,9 +14,13 @@ func (route Routes) Invoke() *httprouter.Router {
 	router := httprouter.New()
 
 	router.ServeFiles("/assets/*filepath", http.Dir("web/assets"))
-
-	router.GET("/", controller.HomeController{}.HandlerIndex)
-	router.GET("/pageNotFound", controller.HomeController{}.HandlerPageNotFound)
-
+	routeHome(router)
 	return router
+}
+
+func routeHome(router *httprouter.Router) {
+	home := controller.HomeController{}
+	router.GET("/", home.Index)
+	router.GET("/pageNotFound", home.PageNotFound)
+
 }

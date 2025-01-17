@@ -18,6 +18,7 @@ func main() {
 		return
 	}
 	port := strconv.Itoa(settings.LaunchSettings.Port)
-	fmt.Printf("Project is Running : http://localhost:%s", port)
+	fmt.Printf("Project is Running : http://localhost:%s\n", port)
 	http.ListenAndServe(":"+port, router.Invoke())
+
 }
