@@ -27,6 +27,7 @@ type User struct {
 	TwoFactorEnabled              bool       `gorm:"column:two_factor_enabled"`
 	Department                    Department `gorm:"foreignkey:DepartmentId;references:ID"`
 	Company                       Company    `gorm:"foreignkey:CompanyId;references:ID"`
+	Office                        Office     `gorm:"foreignkey:OfisId;references:ID"`
 }
 
 func (User) TableName() string {
